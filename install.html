@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<!--[if IE]><![endif]-->
+
+<meta name="version" content="Mobile Services - v: Node 2 - 1.0.4.b71.r14623" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>Mobile Services - Instalación</title>
+
+<script>
+	var LOCALE = 'es';
+</script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/flaminwork.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script>
+	$(function() {
+		$("#header").load("head.html");
+		$("#footer").load("foot.html");
+	});
+</script>
+
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/flaminwork.css" />
+<link type="text/css" rel="stylesheet" href="css/styles.css" />
+<link type="text/css" rel="stylesheet" href="css/lightbox.css" />
+<body>
+	<script>
+		jQuery('body:not(.js)').addClass('js');
+	</script>
+	<div id="wrapper">
+
+		<div id="header"></div>
+
+
+		<hr class="hide" />
+
+		<div class="wrapper">
+			<div id="content-top" class="wrapper"></div>
+
+			<div id="content">
+				<ul class="tabs group">
+					<li class="first odd hover"><a href="index.html">Quick
+							Start</a></li>
+					<li class="current even"><a href="install.html">Instalación</a></li>
+					<li class="odd"><a href="config.html">Configuración</a></li>
+<!-- 					<li class="even"><a href="errors.html">Errores</a></li> -->
+<!--					<li class="even"><a href="conocimiento.html">Base de Conocimiento</a></li> -->
+					<li class="odd"><a href="using.html">Utilización</a></li>
+					<li class="last even"><a href="mobileApp.html">Mobile App</a></li>
+
+				</ul>
+
+
+				<div class="wrapper">
+
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="col-lg-4">
+								<div class="well sidebar-nav">
+									<ul class="nav nav-list">
+										<li class="nav-header first odd">1. Introducción</li>
+										<li class="even"><a href="#1.1">1.1 Público Objetivo</a></li>
+										<li class="odd"><a href="#1.2">1.2 Datos de Contacto</a></li>
+										<li class="even"><a href="#1.3">1.3 Arquitectura
+												General</a></li>
+										<li class="odd"><a href="#1.4">1.4 Arquitectura en
+												Clúster</a></li>
+										<li class="nav-header even">2. Requisitos Previos</li>
+										<li class="odd"><a href="#2.1">2.1 Base de Datos</a></li>
+										<li class="even"><a href="#2.2">2.2 Persistencia de
+												Datos</a></li>
+										<li class="odd"><a href="#2.3">2.3 Conexiones
+												Externas</a></li>
+										<li class="even"><a href="#2.3.1">2.3.1 Proxies para
+												Salidas a Internet</a></li>
+										<li class="odd"><a href="#2.3.2">2.3.2 Servicios
+												Visibles</a></li>
+										<li class="even"><a href="#2.3.3">2.3.3 Instalación y
+												Configuración Remota</a></li>
+										<li class="nav-header odd">3. Configuración del Sistema</li>
+										<li class="even"><a href="#3.1">3.1 Configuración
+												General</a></li>
+										<li class="odd"><a href="#3.2">3.2 Configuración de
+												la Caché</a></li>
+										<li class="last even"><a href="#3.3">3.3 Resources de
+												Conexión</a></li>
+									</ul>
+								</div>
+
+							</div>
+
+							<div class="col-lg-8">
+								<div class="hero-unit">
+									<h2>Mobile Services :: guía de instalación</h2>
+									<h4>Versión: 1.0 - 02-dic-2013</h4>
+								</div>
+
+
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="1">
+											<h2>1. Introducción</h2>
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="1.1">
+											<h3>1.1 - Público Objetivo</h3>
+											<p>
+												El propósito de este manual es la descripción de los pasos a
+												seguir para la correcta instalación y puesta en marcha de <strong>viafirma
+													mobile services</strong>.
+											</p>
+											<p>
+												Este manual está destinado a un perfil <strong>administrador
+													de sistemas habituado al despliegue y mantenimiento de
+													aplicaciones JEE</strong>.
+											</p>
+											<p>Antes de comenzar con la instalación consultar la
+												última versión disponible de este manual.</p>
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="1.2">
+											<h3>1.2 - Datos de Contacto</h3>
+
+											<p>Para cualquier consulta se podrán usar los siguientes
+												canales de soporte:</p>
+
+											<ol>
+												<li class="first">Canal de soporte: <a
+													href="http://soporte.viafirma.com/">http://soporte.viafirma.com</a></li>
+												<li>Recursos para integradores: <a
+													href="http://developers.viafirma.com/">http://developers.viafirma.com</a></li>
+												<li class="last">Correo Electrónico:
+													soporte@viafirma.com</li>
+											</ol>
+
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="1.3">
+											<h3>1.3 - Arquitectura General</h3>
+											<p>A continuación se muestra una descripción básica de la
+												arquitectura y distintos ejemplos de implantación en función
+												de las necesidades.</p>
+
+
+
+											<div class="thumbnail">
+                                            	 <a href="images/mobileservices-arquitectura-servidores.png" data-lightbox="mobileservices-arquitectura-servidores" data-title="Descripción esquema básico" class="thumbnail" >
+													<img src="images/mobileservices-arquitectura-servidores.png">
+                                                </a>
+												<div class="caption">
+													<h5>Descripción esquema básico (DEV)</h5>
+
+													<p>En la ilustración anterior se describe una
+														instalación típica para un entorno de desarrollo (DEV),
+														donde se configuran dos servidores independientes con la
+														siguiente descripción:</p>
+
+<!-- 													<p> -->
+<!--                                                            <a href="images/mobileservices-arquitectura-servidores.png"  -->
+<!--                                                            		data-lightbox="mobileservices-arquitectura-servidores"  -->
+<!--                                                            		data-title="Descripción esquema básico" class="btn btn-primary">ampliar imagen</a> -->
+<!-- 													</p> -->
+												</div>
+											</div>
+
+
+											<h4>Server 1 (firma)</h4>
+
+											<p>
+												En este servidor instalaremos las soluciones <strong>viafirma
+													platform</strong> y <strong>viafirma manager</strong>.
+											</p>
+
+											<p>Las características para este server 1 podrían ser las
+												siguientes:</p>
+
+											<ul>
+												<li class="first odd">SO: Linux, Ubuntu Server</li>
+												<li class="even">RAM: 6 Gb</li>
+												<li class="odd">Micro: 2 micros de 6 núcleos cada uno;
+													a 2Ghz.</li>
+												<li class="even">Disco: 20 Gb [1]</li>
+												<li class="last odd">Application Server: Apache Tomcat
+													7</li>
+											</ul>
+
+											<p>[1] espacio estimado sólo para sistema operativo,
+												servidor de aplicaciones y las aplicaciones.</p>
+
+											<h5>Persistencia en viafirma platform</h5>
+
+											<ul>
+												<li class="first odd"><strong>Logs</strong>: estimado
+													1Gb. por cada millón de operaciones.</li>
+												<li class="even"><strong>Custodia</strong>: variable
+													según peso y número de documentos firmados. Estimado
+													inicial 20 Gb.</li>
+												<li class="last odd"><strong>Auditory</strong>:
+													estimado 1Gb. por cada millón de operaciones. Estimado
+													incial 20 Gb.</li>
+											</ul>
+
+											<h5>Persistencia en viafirma manager</h5>
+
+											<ul>
+												<li class="first last odd"><strong>Logs</strong>:
+													estimado 1 Gb.</li>
+											</ul>
+
+
+											<div class="alert alert-info">nota: manager consumirá
+												la auditoría volcada por viafirma platform y la persiste en
+												su propio modelo de datos (Oracle o Postgres según cada
+												caso; ver datos de la configuración de la database).</div>
+
+
+											<h4>Server 2 (mobile services)</h4>
+
+											<p>
+												En este servidor instalaremos la solución <strong>mobile
+													services</strong>.
+											</p>
+
+											<p>Las características para este server 2 podrían ser las
+												siguientes:</p>
+
+											<ul>
+												<li class="first odd">SO: Linux, Ubuntu Server</li>
+												<li class="even">RAM: 4 Gb</li>
+												<li class="odd">Micro: 2 micros de 6 núcleos cada uno;
+													a 2Ghz.</li>
+												<li class="even">Disco: 20 Gb [1]</li>
+												<li class="last odd">Application Server: Apache Tomcat
+													7</li>
+											</ul>
+
+											<p>[1] espacio estimado sólo para sistema operativo,
+												servidor de aplicaciones y la aplicación.</p>
+
+											<h5>Persistencia en mobile services</h5>
+
+											<ul>
+												<li class="first odd"><strong>Logs</strong>: estimado
+													1Gb. por cada millón de operaciones.</li>
+												<li class="last even"><strong>Plantillas</strong>:
+													variable según peso y número de las plantillas gestionadas.
+													Estimado incial 2 Gb. (ya contemplados en los 20 Gb.
+													recomendados para este server).</li>
+											</ul>
+
+											<h6>Persistencia externa de mobile services</h6>
+
+											<p>
+												Los documentos firmados (<strong>signed</strong>) y los
+												borradores en espera de ser firmados (<strong>drafted</strong>)
+												serán persistidos en repositorios externos a este servidor,
+												por ejemplo, un FTP, un filesystem (con visibilidad NSF) o
+												un gestor documental (ECM con soporte CMiS).
+											</p>
+										</section>
+									</div>
+
+
+									<div class="span9">
+										<section id="1.4">
+											<h3>1.4 - Arquitectura en Clúster</h3>
+											<p>La suite permite su instalación en clúster para
+												asegurar una alta concurrencia, o clúster para asegurar la
+												disponibilidad del servicio. A continuación se proponen dos
+												ejemplos de configuración:</p>
+
+											<h4>Alta Disponibilidad</h4>
+
+											<p>Orientado a servicios 24/7.</p>
+
+											<div class="thumbnail">
+                                            	<a href="images/mobileservices-cluster_highdemand.png" data-lightbox="mobileservices-cluster_highdemand" data-title="Esquema propuesto para Alta Disponibilidad" class="thumbnail">
+													<img src="images/mobileservices-cluster_highdemand.png">
+												</a>
+												<div class="caption">
+													<h5>Esquema propuesto para Alta Disponibilidad</h5>
+
+
+													<p>Compuesto por dos nodos y en los que duplicamos los
+														servicios de viafirma platform y mobile services.</p>
+
+													<p>Viafirma manager no se pone en clúster, ya que hace
+														uso de la caché compartida entre viafirma platform de cada
+														nodo.</p>
+
+													<p>Con la caída del nodo2, el servicio se seguirá
+														ofreciendo al 100%. Si se cae el nodo1, el nodo2 podrá
+														seguir leyendo la configuración de viafirma manager que
+														está cacheada.</p>
+
+													<p>Sin embargo, los servicios de viafirma manager no
+														estarían serían ofrecidos al 100% durante el período de
+														caída, en concreto no sería posible:</p>
+
+													<ul>
+														<li class="first odd">Registro de nuevos usuarios</li>
+														<li class="even">Editar o crear nueva configuración</li>
+														<li class="last odd">Gestionar estadísticas de firma</li>
+													</ul>
+
+													<p>Es importante destacar que durante el período de	caída del nodo que contiene viafirma manager, NO se
+														perderá ningún registro de operación de cara a la gestión
+														de auditoría y estadísticas.</p>
+
+													<p>Viafirma manager, tras su reinicio, consulta el último registro recuperado en la auditoría de viafirma
+														platform (en ambos nodos), y sincroniza lo nuevo.</p>
+
+<!-- 													<p> -->
+<!-- 														<a href="images/mobileservices-cluster_highdemand.png"  -->
+<!-- 															data-lightbox="mobileservices-cluster_highdemand"  -->
+<!-- 															data-title="Esquema propuesto para Alta Disponibilidad"  -->
+<!-- 															class="btn btn-primary">ampliar imagen</a> -->
+<!-- 													</p> -->
+												</div>
+											</div>
+
+
+											<h4>Alta Concurrencia</h4>
+
+											<div class="thumbnail">
+                                            	<a href="images/mobileservices-cluster_disponibilidad.png" data-lightbox="mobileservices-cluster_disponibilidad" data-title="Esquema propuesto para Alta Concurrencia" class="thumbnail">
+													<img src="images/mobileservices-cluster_disponibilidad.png">
+												</a>
+												<div class="caption">
+													<h5>Esquema propuesto para Alta Concurrencia</h5>
+
+													<p>Orientado a implantaciones con una demanda altade
+														peticiones concurrentes.</p>
+														
+<!-- 													<p> -->
+<!--                                                     	<a href="images/mobileservices-cluster_disponibilidad.png" data-lightbox="mobileservices-cluster_disponibilidad"  -->
+<!--                                                     		data-title="Esquema propuesto para Alta Concurrencia" class="btn btn-primary">ampliar imagen</a> -->
+<!-- 													</p> -->
+												</div>
+											</div>
+
+
+											<h4>Única Instancia</h4>
+
+											<div class="thumbnail">
+                                            	<a href="images/mobileservices-standalone.png" data-lightbox="mobileservices-standalone" data-title="Esquema sin clúster" class="thumbnail">
+													<img src="images/mobileservices-standalone.png">
+                                                </a>
+												<div class="caption">
+													<h5>Esquema sin clúster</h5>
+
+													<p>Orientado a implantaciones para desarrollo o pruebas	unitarias. Los modo "PASIVO" indican que estarán apagados
+														y que sólo se levantarán estos servicios en caso de que en el otro nodo se proceda a su apagado, por ejemplo 
+                                                        para un upgrade o mantenimiento.</p>
+                                                        
+<!-- 													<p> -->
+<!-- 														<a href="images/mobileservices-standalone.png" data-lightbox="mobileservices-standalone"  -->
+<!-- 															data-title="Esquema sin clúster" class="btn btn-primary">ampliar imagen</a> -->
+<!-- 													</p> -->
+
+												</div>
+											</div>
+
+										</section>
+									</div>
+
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="2">
+											<h2>2 - Requisitos Previos</h2>
+										</section>
+									</div>
+
+								</div>
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="2.1">
+											<h3>2.1 - Base de Datos</h3>
+
+											<p>Viafirma mobile services consume un modelo de datos que podrá ser instalado en PostgreSQL y Oracle. Junto a los
+												recursos de instalación se entegará un conjunto de scripts SQL debidamente enumerados para la creación del modelo de
+												datos, diferenciados entre PostgreSQL y Oracle.</p>
+
+											<p>Los scripts estarán divididos al mismo tiempo por versión, para implantación desde cero, o bien para upgrade
+												de versión. Ejemplo de scripts SQL entregados en la documentación:</p>
+
+
+											<ul>
+												<li class="first odd">SQL-v1.x.x
+													<ul>
+														<li class="first odd">Oracle
+															<ul>
+																<li class="first odd">01_tables.sql</li>
+																<li class="even">02_constraints.sql</li>
+																<li class="last odd">03_init_inserts.sql</li>
+															</ul>
+														</li>
+														<li class="last even">Postgres
+															<ul>
+																<li class="first odd">01_tables.sql</li>
+																<li class="even">02_secuences.sql</li>
+																<li class="last odd">03_init_inserts.sql</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+												<li class="last even">Upgrade
+													<ul>
+														<li class="first odd">Oracle
+															<ul>
+																<li class="first last odd">upgrade_1.x.x_to_1.1.x</li>
+															</ul>
+														</li>
+														<li class="last even">Postgres
+															<ul>
+																<li class="first last odd">upgrade_1.x.x_to_1.1.x</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+
+											<p>
+												Tras la correcta instalación será necesario indicar los datos de conexión en la configuración de mobile services.
+												Esta configuración en concreto se explica en el <a href="#3.3">capítulo 3</a>, Configuración del Sistema, en
+												el punto “Resources de Conexión”.
+											</p>
+
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="2.2">
+											<h3>2.2 - Persistencia de Datos</h3>
+
+											<p>Mobile Services pude usar distintos mecanismos para la
+												persistencia de los documentos gestionados por el sistema, y
+												se describen a continuación:</p>
+
+											<ul>
+												<li class="first odd"><strong>FileSystem</strong>:
+													sistema basado en NFS, donde tendremos que asegurar la
+													visibilidad desde el servidor de aplicaciones en el que
+													esté instalado el sistema (en este caso, Apache Tomcat), y
+													asegurar también los permisos de escritura. En caso de
+													realizar una implantación en alta disponibilidad, asegurar
+													que todos los servidores (apache tomcat) que formen parte
+													del clúster tengan visibilidad y permisos sobre la unidad
+													NSF asignada para la persistencia.</li>
+												<li class="even"><strong>CMiS</strong>: protocolo que
+													hace interoperable a cualquier gestor documental (ECM) con
+													soporte para este protocolo.</li>
+												<li class="last odd"><strong>FTP</strong>: mecanismo de
+													transferencia de fichero basado en cualquiera de las
+													modalidades previstas por este protocolo (FTP, SFTP, FTPS).
+													Tras la correcta instalación del sistema de persistencia
+													elegido para la implantación, será necesario indicar los
+													datos de conexión en la configuración de mobile services.
+													Esta configuración en concreto se explica en el capítulo 3,
+													Configuración del Sistema, en el punto <a
+													href="config.html">“Descripción de Properties”</a>.</li>
+											</ul>
+
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="2.3">
+											<h3>2.3 - Conexiones Externas</h3>
+
+											<p>Viafirma mobile services realiza conexiones con sistemas de terceros, por lo que desde el departamento de
+												sistemas y comunicaciones se deberá asegurar los permisos necesarios para las siguentes URLs y puertos.</p>
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="2.3.1">
+											<h4>2.3.1 - Proxies para Salidas a Internet</h4>
+
+											<p>Si viafirma mobile services va a necesitar salir por	un proxy, es necesario informar los datos de conexión para
+												inlcuirlos en la configuración específica de conexión.</p>
+											<p>
+												Es importante detectar <strong>antes de la instalación</strong> si existen mecanismos internos que puedan
+												alterar las cabeceras http en las comunicaciones de red, pues el sistema implementa como mecanismo de securización,
+												el estándard OAuth, sensible a este tipo de comportamiento y que haría inviable la instalación del servicio.
+											</p>
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="2.3.2">
+											<h4>2.3.2 - Servicios Visibles</h4>
+
+											<p>Viafirma mobile services debe tener visiblidad de los siguientes servicios:</p>
+
+
+											<dl>
+												<dt class="first">Servicio de Firma</dt>
+												<dd class="first">
+													<p>El servicio de firma podrá ser consumido de forma
+														local (mismo servidor o servidor dentro de la misma red),
+														o bien ser consumido en modo cloud, a partir de los
+														servicios ofrecidos por www.viafirma.com.</p>
+													<p>En cualquier caso, las URLS serían:</p>
+
+													<ul>
+														<li class="first odd"><a href="http://services.viafirma.com/viafirma" target="_blank">http://services.viafirma.com/viafirma</a></li>
+														<li class="even"><a href="https://services.viafirma.com/viafirma" target="_blank">https://services.viafirma.com/viafirma</a></li>
+														<li class="odd"><a href="http://testservices.viafirma.com/viafirma" target="_blank">http://testservices.viafirma.com/viafirma</a></li>
+														<li class="even"><a href="https://testservices.viafirma.com/viafirma" target="_blank">https://testservices.viafirma.com/viafirma</a></li>
+														<li class="odd"><a href="http://dev.viafirma.com/viafirma" target="_blank">http://dev.viafirma.com/viafirma</a></li>
+														<li class="last even"><a href="https://dev.viafirma.com/viafirma" target="_blank">https://dev.viafirma.com/viafirma</a></li>
+													</ul>
+													<p>Y en caso de consumir el servicio de forma local,
+														revisar la configuración de viafirma mobile services el
+														acceso a la URL informada en la variable VIAFIRMA_URL .
+														Ver capítulo 3 "configuración del sistema".</p>
+												</dd>
+												<dt>FTP</dt>
+												<dd>Visibilidad sobre el FTP configurado como
+													persistencia por defecto en el sistema. Ver capítulo 3
+													"configuración del sistema".</dd>
+												<dt>CMiS</dt>
+												<dd>Visibilidad sobre el CMiS configurado como
+													persistencia por defecto en el sistema. Ver capítulo 3
+													“configuración del sistema”.</dd>
+												<dt>Proveedor de Notificaciones Push</dt>
+												<dd>
+													<ul>
+														<li class="first odd">Apple Push Notificaction (APN)
+															<ul>
+																<li class="first odd">Producción:
+																	gateway.push.apple.com, port 2195</li>
+																<li class="last even">Desarrollo (sandbox):
+																	gateway.sandbox.push.apple.com, port 2195</li>
+															</ul>
+														</li>
+														<li class="last even">Google Cloud Messaging (GCM)
+															<ul>
+																<li class="first last odd">https://android.googleapis.com/gcm/send</li>
+															</ul>
+														</li>
+													</ul>
+												</dd>
+												<dt class="last"></dt>
+												<dd class="last"></dd>
+											</dl>
+
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="2.3.3">
+											<h4>2.3.3 - Instalación y Configuración Remota</h4>
+
+											<p>En caso de tener contratada la instalación,
+												configuración y/o mantenimiento remoto del servidor que
+												alojará viafirma-platform, se requerirá acceso vía SSH por
+												el puerto predeterminado (23) o por aquel otro establecido
+												por el departamento de sistemas.</p>
+											<p>En caso necesario, la IP Pública desde la que se
+												accedería al servidor de viafirma mobile services para su
+												mantenimiento sería la siguiente:</p>
+
+											<ul>
+												<li class="first odd">IP Pública: <strong>164.138.208.83</strong>
+													Acceso servidores cloud de Viavansi/Viafirma
+												</li>
+												<li class="last even">IP Pública: <strong>213.172.59.142</strong>
+													Acceso desde centro de trabajo Viavansi/Viafirma
+												</li>
+											</ul>
+
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="3">
+											<h2>3 - Configuración del Sistema</h2>
+											<p>Viafirma mobile services necesita dos tipos de
+												configuraciones: por un lado, y a nivel de primera
+												instalación, y por otro lado la configuración permitida
+												durante el uso.</p>
+											<p>En el primer caso, la configuración “de sistema”
+												necesaria para la instalación se realizará a tráves ficheros
+												de configuración, tal y como se describe en los siguientes
+												puntos.</p>
+											<p>En el segundo caso, viafirma mobile services ofrece
+												una interfaz gráfica de usuario donde un
+												“super-administrador” podrá completar y actualizar el resto
+												de configuración necesaria para la operación del sistema.
+												Este tipo de configuración no se explicará en este manual,
+												se hará en el manual de administrador.</p>
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="3.1">
+											<h3>3.1 - Configuración General</h3>
+
+											<p>
+												Se realizará a través del fichero de configuración
+												config.properties, ubicado en
+												<code>/&lt;TOMCAT_HOME&gt;/mobile-services/WEB-INF/Classes/config.properties</code>
+												.
+											</p>
+
+											<p>En circunstancias normales, el war facilitado para la
+												instalación de viafirma mobile services ya llevará este
+												fichero de configuración listo para su uso, y sólo en el
+												caso de que el administrador del sistema lo estime oportuno,
+												podrá acceder a él para realizar las modificaciones
+												deseadas; cualquier cambio en este fichero requiere el
+												reinicio de Tomcat.</p>
+											<h4>Config.properties</h4>
+											<p>
+												Toda la descripción y uso del fichero de configuración <strong>config.properties</strong>
+												se explica detalladamente en el siguiente enlace <a
+													href="config.html">Configuración
+													de Properties</a>
+											</p>
+
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="3.2">
+											<h3>3.2 - Configuración de la Caché</h3>
+
+											<p>
+												El sistema usará <strong>Hacelcast</strong> para la gestión
+												de memoria distribuida en entornos balanceados y de alta
+												disponibilidad. Durante el proceso de instalación se deberá
+												revisar la información contenida en el siguiente fichero de
+												configuración:
+											</p>
+
+											<p>
+												<code>/&lt;TOMCAT_HOME&gt;/mobile-services/WEB-INF/Classes/hazelcast.xml</code>
+											</p>
+
+
+											<p>Los parámetros a revisar durante la instalación serán
+												los siguientes:</p>
+
+
+
+											<pre class="pre-scrollable">								
+&lt;group&gt;
+	&lt;name&gt;mobile-services-cache&lt;/name&gt;
+	&lt;password&gt;12345&lt;/password&gt;
+&lt;/group&gt;  
+</pre>
+
+											<pre class="pre-scrollable">	&lt;network&gt;
+		&lt;port auto-increment="false"&gt;5701&lt;/port&gt;
+		&lt;join&gt;
+			&lt;multicast enabled="true"&gt;
+			&lt;multicast-group&gt;224.0.0.1&lt;/multicast-group&gt;
+			&lt;multicast-port&gt;54327&lt;/multicast-port&gt;
+			&lt;/multicast&gt;
+		&lt;/join&gt;
+		&lt;interfaces enabled="true"&gt;
+			&lt;interface&gt;192.168.10.20&lt;/interface&gt;
+			&lt;interface&gt;192.168.10.21&lt;/interface&gt;       
+		&lt;/interfaces&gt;
+	&lt;/network&gt;
+</pre>
+
+											<div class="alert alert-info">
+												<ul>
+													<li class="first odd">Group: el nombre y password
+														deberá ser compartido por todos los nodos activados en el
+														clúster.</li>
+													<li class="even">Puerto: hay que asegurar que el
+														puerto esté disponible.</li>
+													<li class="last odd">Interfaces: indicar las IP´s o
+														rango de IP´s autorizadas; permite el uso de máscaras, por
+														ejemplo 192.168.10.*</li>
+												</ul>
+											</div>
+
+
+
+
+										</section>
+									</div>
+
+								</div>
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<section id="3.3">
+											<h3>3.3 - Resources de Conexión</h3>
+
+											<p>
+												En el contexto de mobile services se debe incluir recursos
+												adicionales para la conexión a Base de Datos y el soporte de
+												web beans.
+												<code>&lt;TOMCAT_HOME&gt;/conf/Catalina/localhost/mobile-services.xml</code>
+											</p>
+
+											<p>El sistema soporta PostgreSQL y Oracle, y en función
+												de la implantación seleccionada se uará uno de los
+												siguientes resources:</p>
+											<p></p>
+											<pre class="pre-scrollable"> &lt;Resource auth="Container" driverClassName="org.postgresql.Driver" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" 
+   maxActive="100" maxIdle="30" maxWait="10000" 
+   name="jdbc/default_manager" password="password" 
+   type="javax.sql.DataSource" url="jdbc:postgresql://XXX.XXX.XX.XX:5432/mobileservices" 
+   username="mobileservices"/ &gt;
+</pre>
+
+											<p></p>
+											<p>Además, debemos los recursos para el soporte de CDI
+												(web bean) sobre Tomcat:</p>
+											<p></p>
+											<pre class="pre-scrollable">  &lt;Resource auth="Container" description="Required for CDI in Tomcat" 
+    factory="org.jboss.weld.resources.ManagerObjectFactory" name="BeanManager" 
+    type="javax.enterprise.inject.spi.BeanManager" / &gt;
+</pre>
+
+											<p></p>
+											<p>En el kit de instalación se hace entrega de un context.xml de ejemplo.</p>
+
+
+
+										</section>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<div id="content-bottom" class="wrapper"></div>
+
+
+			<hr class="hide" />
+
+			<div id="footer"></div>
+
+		</div>
+
+	</div>
+</body>
+</html>

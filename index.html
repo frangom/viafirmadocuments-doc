@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<!--[if IE]><![endif]-->
+
+<meta name="version" content="Mobile Services - v: Node 2 - 1.0.4.b71.r14623" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>Mobile Services - Quick Start</title>
+
+
+<script>
+	var LOCALE = 'es';
+</script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/flaminwork.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script> 
+		$(function(){
+			$("#header").load("head.html");
+			$("#footer").load("foot.html");
+		});
+	</script>
+
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/styles.css" />
+<link type="text/css" rel="stylesheet" href="css/flaminwork.css" />
+<body>
+	<script>
+            jQuery('body:not(.js)').addClass('js');
+        </script>
+	<div id="wrapper">
+
+		<div id="header"></div>
+
+
+		<hr class="hide" />
+
+		<div class="wrapper">
+			<div id="content-top" class="wrapper"></div>
+
+			<div id="content">
+				<ul class="tabs group">
+					<li class="current odd"><a href="index.html">Quick Start</a></li>
+					<li class="even"><a href="install.html">Instalación</a></li>
+					<li class="odd"><a href="config.html">Configuración</a></li>
+<!-- 					<li class="even"><a href="errors.html">Errores</a></li> -->
+<!--					<li class="even"><a href="conocimiento.html">Base de Conocimiento</a></li> -->
+					<li class="odd"><a href="using.html">Utilización</a></li>
+					<li class="last even"><a href="mobileApp.html">Mobile App</a></li>
+
+				</ul>
+
+				<div class="wrapper">
+
+					<h3>Visión General de la Solución</h3>
+
+					<p>La solución viafirma mobile services forma parte de un
+						ecosistema compuesto por otros componentes no descritos en este
+						manual y que son necesarios para su funcionamiento.</p>
+
+					<p>Como parte de la suite de viafirma, los componentes
+						necesarios son:</p>
+
+					<ol>
+						<li>viafirma platform</li>
+						<li>viafirma manager</li>
+						<li>viafirma mobile services</li>
+						<li>viafirma document iOS y Android</li>
+					</ol>
+
+					<p>En este manual sólo se describe el procedimiento de
+						instalación y configuración de viafirma mobile services. El resto
+						de componentes tiene su propia documentación que deberá ser
+						consultada en cada caso.</p>
+
+					<p>
+						<img src="images/vision_general_solucion.png" />
+					</p>
+				</div>
+
+			</div>
+
+
+			<div id="content-bottom" class="wrapper"></div>
+
+			<hr class="hide" />
+
+			<div id="footer"></div>
+
+		</div>
+
+	</div>
+</body>
+</html>

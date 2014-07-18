@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<!--[if IE]><![endif]-->
+
+<meta name="version" content="Mobile Services - v: Node 2 - 1.0.4.b71.r14623" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>Mobile Services - Mobile App</title>
+
+
+<script>
+	var LOCALE = 'es';
+</script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/flaminwork.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script> 
+		$(function(){
+			$("#header").load("head.html");
+			$("#footer").load("foot.html");
+		});
+</script>
+
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/flaminwork.css" />
+<link type="text/css" rel="stylesheet" href="css/styles.css" />
+<link type="text/css" rel="stylesheet" href="css/lightbox.css" />
+
+<body>
+	<script>
+            jQuery('body:not(.js)').addClass('js');
+    </script>
+	<div id="wrapper">
+
+		<div id="header"></div>
+
+		<hr class="hide" />
+
+		<div class="wrapper">
+			<div id="content-top" class="wrapper"></div>
+
+			<div id="content">
+				<ul class="tabs group">
+					<li class="first odd"><a href="index.html">Quick Start</a></li>
+					<li class="even"><a href="install.html">Instalación</a></li>
+					<li class="odd"><a href="config.html">Configuración</a></li>
+<!-- 					<li class="even"><a href="errors.html">Errores</a></li> -->
+<!--					<li class="even"><a href="conocimiento.html">Base de Conocimiento</a></li> -->
+					<li class="odd"><a href="using.html">Utilización</a></li>
+					<li class="current last even"><a href="mobileApp.html">Mobile
+							App</a></li>
+
+				</ul>
+
+
+				<div class="wrapper">
+
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="col-lg-3">
+								<div class="well sidebar-nav" style="padding: 0.25em;">
+									<h5>Distribución</h5>
+									<ul class="nav nav-list" style="margin-left: 0;">
+										<li class="nav-header first odd">Autorización</li>
+										<li class="even"><a href="#authApple">1.1 Apple</a></li>
+										<li class="last odd"><a href="#authGoogle">1.2 Google</a></li>
+									</ul>
+
+								</div>
+
+							</div>
+
+							<div class="col-lg-9">
+								<div class="hero-unit">
+									<h2>Mobile Services :: app móvil</h2>
+									<h4>Versión: 1.0 - 02-dic-2013</h4>
+								</div>
+
+
+
+
+								<div class="row-fluid">
+									<div class="span9">
+										<h2>Autorización Cuenta Desarrolladores</h2>
+										<section id="authIntro">
+
+											<p>Para la distribución de la app nativa existen dos
+												posibilidades:</p>
+
+											<ul>
+												<li class="first odd">Publicación en el market: para la
+													libre descarga por parte del usuario final.</li>
+												<li class="last even">Distribución privada (ad-hoc):
+													para la distribución controlada entre tiendas, sucursales o
+													empleados.</li>
+											</ul>
+
+											<p>
+												Para el primer caso será necesaria una cuenta oficial en los
+												respectivos markets (Apple Store y Google Play) de la
+												compañía que desea distribuir la app móvil. Sobre esta
+												cuenta se deberán otorgar los permisos adecuados a la cuenta
+												de <strong>viafirma</strong> para poder gestionar la subida
+												y publicación de la app, tal y como se describe en los
+												siguientes puntos.
+											</p>
+
+										</section>
+
+
+										<section id="authApple">
+											<h2>1.1 Autorización para Apple</h2>
+
+											<p>La empresa debe contar con una cuenta en vigor, del
+												tipo enterprise o corporate. Sobre esta cuenta hay que
+												asignar los permisos tal y como se explica a continuación:</p>
+
+
+
+											<div class="thumbnail">
+
+												<h5>Developer Apple</h5>
+												
+												<a class="thumbnail" href="images/apple-01-developer.png" data-lightbox="apple-01-developer" data-title="Developer Apple" >
+													<img src="images/apple-01-developer.png">
+												</a>
+
+												<div class="caption">
+<!-- 													<p> -->
+<!-- 														<a href="images/apple-01-developer.apple.com.png" -->
+<!-- 															class="btn btn-primary">ampliar imagen</a> -->
+<!-- 													</p> -->
+
+												</div>
+
+												<h5>Acceso con cuenta de la Empresa</h5>
+
+												<a class="thumbnail" href="images/apple-02-member-center.png" data-lightbox="apple-02-member-center" data-title="Acceso con cuenta de la Empresa" >
+													<img src="images/apple-02-member-center.png">
+												</a>
+
+												<div class="caption">
+<!-- 													<p> -->
+<!-- 														<a href="images/apple-02-member-center.png" -->
+<!-- 															class="btn btn-primary">ampliar imagen</a> -->
+<!-- 													</p> -->
+												</div>
+
+												<h5>Usuarios Autorizados</h5>
+
+												<a class="thumbnail" href="images/apple-04-invitations.png" data-lightbox="apple-04-invitations" data-title="Usuarios Autorizados" >
+													<img src="images/apple-04-invitations.png">
+												</a>
+
+												<div class="caption">
+<!-- 													<p> -->
+<!-- 														<a -->
+<!-- 															href="images/apple-04-invitations.png" -->
+<!-- 															class="btn btn-primary">ampliar imagen</a> -->
+<!-- 													</p> -->
+												</div>
+
+												<h5>Nueva Invitación</h5>
+
+												<a class="thumbnail" href="images/apple-03-people.png" data-lightbox="apple-03-people" data-title="Nueva Invitación" >
+													<img src="images/apple-03-people.png">
+												</a>
+
+												<div class="caption">
+<!-- 													<p> -->
+<!-- 														<a href="images/apple-03-people.png" -->
+<!-- 															class="btn btn-primary">ampliar imagen</a> -->
+<!-- 													</p> -->
+												</div>
+
+												<h5>Datos nuevo Usuario</h5>
+
+												<a class="thumbnail" href="images/apple-05-role.png" data-lightbox="apple-05-role" data-title="Datos nuevo Usuario" >
+													<img src="images/apple-05-role.png">
+												</a>
+
+												<div class="caption">
+<!-- 													<p> -->
+<!-- 														<a href="images/apple-05-role.png" -->
+<!-- 															class="btn btn-primary">ampliar imagen</a> -->
+<!-- 													</p> -->
+												</div>
+
+
+												<ol>
+													<li class="first">Acceder a <a href="http://developer.apple.com/">http://developer.apple.com</a></li>
+													<li>Hacer click sobre <strong>"Member Center"</strong>.
+													</li>
+													<li>Autenticarse con las credenciales de la cuenta
+														apple de la empresa.</li>
+													<li>Usuarios Autorizados.</li>
+													<li>Ir al panel de invitaciones.</li>
+													<li>Invitar a nuevo usuario.</li>
+													<li>Indicar los datos de Viafirma.</li>
+													<li>Marcar nivel <strong>admin</strong>.
+													</li>
+													<li class="last">Enviar invitación.</li>
+
+												</ol>
+
+
+											</div>
+
+										</section>
+
+
+										<section id="authGoogle">
+											<h2>1.2 Autorización para Google Play</h2>
+
+											<p>La empresa debe contar con una cuenta en vigor. Sobre
+												esta cuenta hay que asignar los permisos tal y como se
+												explica a continuación:</p>
+
+
+											<div class="thumbnail">
+
+												<h5>Centro de Desarrolladores</h5>
+
+												<a class="thumbnail" href="images/google-01-config.png" data-lightbox="google-01-config" data-title="Centro de Desarrolladores" >
+													<img src="images/google-01-config.png">
+												</a>
+
+												<div class="caption">
+<!-- 													<p> -->
+<!-- 														<a href="images/google-01-config.png" -->
+<!-- 															class="btn btn-primary">ampliar imagen</a> -->
+<!-- 													</p> -->
+												</div>
+
+												<h5>Invitación</h5>
+
+												<a class="thumbnail" href="images/google-02-invitation-roles.png" data-lightbox="google-02-invitation-roles" data-title="Invitación" >
+													<img src="images/google-02-invitation-roles.png">
+												</a>
+
+												<div class="caption">
+<!-- 													<p> -->
+<!-- 														<a href="images/google-02-invitation-roles.png" -->
+<!-- 															class="btn btn-primary">ampliar imagen</a> -->
+<!-- 													</p> -->
+												</div>
+
+
+												<ol>
+													<li class="first">Acceder a <a
+														href="http://developer.apple.com/">http://developer.apple.com</a></li>
+													<li>Ir a la configuración de la cuenta.</li>
+													<li>Hacer click en "Derechos y Cuentas de Usuario"</li>
+													<li>Hacer click en "Invitar a un nuevo usuario".</li>
+													<li>Indicar la cuenta de correo del desarrollador
+														autorizado por viafirma.</li>
+													<li class="last">Seleccionar rol o bien personalizar
+														los permisos.</li>
+												</ol>
+
+											</div>
+										</section>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="content-bottom" class="wrapper"></div>
+
+			<hr class="hide" />
+
+			<div id="footer"></div>
+
+		</div>
+
+	</div>
+</body>
+</html>

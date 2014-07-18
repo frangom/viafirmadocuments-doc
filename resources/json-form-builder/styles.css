@@ -1,0 +1,111 @@
+body {
+	color: #555;
+	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.jfb-send {
+	border: 1px solid #ccc;
+	display: block;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 0 auto;
+	padding: 0.5em;
+	width: 100%;
+}
+
+.jfb-container {
+	background-color: #efefef;
+	border-radius: 5px;
+	margin-bottom: 2em;
+	padding: 1em;
+}
+
+.jfb-container-title {
+	border-bottom: 1px solid #ddd;
+	font-size: 1.6em;
+	margin: 0 0 1em 0;
+	padding-bottom: 0.25em;
+}
+
+.jfb-row .jfb-item {
+	border: 1px solid #ccc;
+	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 0 0.5em;
+	height: 30px;
+}
+
+.jfb-item-select {
+  padding: 0.25em 0.5em;
+}
+
+.jfb-item-link,
+.jfb-item-today-text {
+	border: 0;
+	padding: 0;
+}
+
+.jfb-item-type-textfield {
+	width: 95%;
+}
+
+.jfb-row {
+	overflow: hidden;
+}
+
+.jfb-error .jfb-item {
+	border-color: red;
+}
+
+.jfb-error-message {
+	color: red;
+	display: block;
+}
+
+.jfb-item-wrapper {
+	float: left;
+	margin: 0 0 1.5em 0;
+	padding-right: 1em;
+
+	-moz-box-sizing: border-box;
+			 box-sizing: border-box;
+}
+
+	.jfb-item-wrapper .label,
+	.jfb-item-wrapper label {
+		display: block;
+		margin-bottom: 0.25em;
+	}
+
+	input.jfb-item-radio,
+	input.jfb-item-checkbox {
+	  height: auto;
+		margin-left: 0.25em;
+		padding: 0;
+		vertical-align: middle;
+	}
+
+	.jfb-item-radio-wrapper,
+	.jfb-item-checkbox-wrapper {
+		display: block;
+		margin-bottom: 0.25em;
+	}
+
+	.jfb-item-radio-wrapper label,
+	.jfb-item-checkbox-wrapper label {
+		display: inline-block;
+		margin-bottom: -0.35em;
+		margin-left: 0.5em;
+		vertical-align: middle;
+	}
+
+@media screen and (max-width: 720px) {
+	.jfb-item-wrapper {
+		float: none;
+	}
+
+	.jfb-item-wrapper {
+		width: 100% !important;
+	}
+}
