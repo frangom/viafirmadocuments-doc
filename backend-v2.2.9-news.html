@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<!--[if IE]><![endif]-->
+
+<meta name="version" content="Mobile Services - v: Node 2 - 1.0.4.b71.r14623" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<title>Backend 2.2.9 - novedades</title>
+
+
+<script>
+	var LOCALE = 'es';
+</script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/flaminwork.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+<script>
+	$(function() {
+		$("#header").load("head.html");
+		$("#footer").load("foot.html");
+	});
+</script>
+
+<link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="css/flaminwork.css" />
+<link type="text/css" rel="stylesheet" href="css/styles.css" />
+<link type="text/css" rel="stylesheet" href="css/lightbox.css" />
+
+<body>
+	<script>
+		jQuery('body:not(.js)').addClass('js');
+	</script>
+	<div id="wrapper">
+
+		<div id="header"></div>
+
+		<hr class="hide" />
+
+		<div class="wrapper">
+			<div id="content-top" class="wrapper"></div>
+
+			<div id="content">
+				<ul class="tabs group">
+					<li class="first odd"><a href="index.html">Quick Start</a></li>
+					<li class="even"><a href="install.html">Instalación</a></li>
+					<li class="odd"><a href="config.html">Configuración</a></li>
+<!-- 					<li class="even"><a href="errors.html">Errores</a></li> -->
+<!--					<li class="even"><a href="conocimiento.html">Base de Conocimiento</a></li> -->
+					<li class="current odd hover"><a href="using.html">Utilización</a></li>
+					<li class="last even"><a href="mobileApp.html">Mobile App</a></li>
+
+				</ul>
+
+				<div class="wrapper">
+
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="col-lg-3">
+							<!-- ejemplo menu lista lateral
+								<div class="well sidebar-nav" style="padding: 0.25em;">
+									<ul class="nav nav-list" style="margin-left: 0;">
+										<li class="nav-header first odd">Menu1 impar</li>
+											<li class="even"><a href="#item1.1">item1.1 par</a></li>
+											<li class="odd"><a href="item1.2">item1.2 impar</a></li>
+									</ul>
+								</div>
+							-->
+
+							<div class="well sidebar-nav" style="padding: 0.25em;">
+								<ul class="nav nav-list" style="margin-left: 0;">
+									<li class="nav-header first odd">Panel de Control</li>
+										<li class="even"><a href="#auditory">Auditor&iacute;a</a></li>
+										<li class="odd"><a href="#systemstatus">Estado del Sistema</a></li>
+									<li class="nav-header first even">Actividad</li>
+										<li class="odd"><a href="#messagesactivity">Mensajes</a></li>
+									<li class="nav-header first odd">Administración</li>
+										<li class="even"><a href="#templates">Plantillas</a></li>
+								</ul>
+							</div>
+
+
+
+							</div>
+
+							<div class="col-lg-9">
+								<div class="hero-unit">
+									<h2>Backend de viafirma documents</h2>
+									<h4>v2.2.9 - NOVEDADES</h4>
+								</div>
+
+								<!-- sample content
+								<div class="row-fluid">
+									<div class="span9">
+										<h2>h2 for item1.1</h2>										
+										<section id="item1.1">
+											section for item1.1
+										</section>										
+									</div>
+								</div>
+								end sample content -->
+
+								
+
+								<!-- contenido para auditoría -->
+								<div class="row-fluid">
+									<div class="span9">
+										<h2>Auditor&iacute;a</h2>										
+										<section id="auditory">
+											<p>
+												Se incluye nueva interfaz para visutalizar el estado de la caché del sistema, 
+												implementada por hazelcast.
+											</p>
+											<p>
+												Esta nueva interfaz está disponible desde el menú "Panel de Control > Auditoría de Mensajes", y muestra un listado de los objetos que permanecen en caché y su estado.
+											</p>
+											<p>
+												Además de la nueva interfaz que permite su visualización gráfica, se han implementado importantes mejoras para prevenir el bloqueo de objetos en caché que impedían su correcta tramitación o reprocesado. También se ha mejorado el proceso de borrado de aquellos objetos de caché cuyo cliclo de vida ha finalizado, evitando el aumento del espacio reservado para la gestión de la caché.
+											</p>
+											<p>
+												A continuación se explican algunas utilidades de la nueva vista de caché:
+											</p>
+
+											<div class="thumbnail">
+												<img src="images/v2.2.9-news/auditory_01_list.png" alt="caché de mensajes">
+												<div class="caption">
+													<h5>Nueva vista de la caché de mensajes</h5>
+
+													<p>En esta pantalla el usuario podrá:</p>
+													<ul>
+														<li>A: buscar por fecha y código de mensaje.</li>
+														<li>B: información básica del message en caché, pudiendo ésta ser ordenada por cada una de las columnas de la tabla.</li>
+														<li>C: ver el detalle del mensaje.</li>
+													</ul>
+
+												</div>
+											</div>
+
+										</section>	<!-- fin seccion auditory -->									
+									</div>
+								</div>
+								<!-- fin contenido para auditoría -->
+
+								
+
+								<!-- contenido para estado de sistema -->
+								<div class="row-fluid">
+									<div class="span9">
+										<h2>Estado el Sistema</h2>										
+										<section id="systemstatus">
+											
+											<p>
+												Desde el menú "Panel de Control > Información del Sistema" se accede a un panel mejorado, ofreciendo una vista rápida del estado del sistema donde se mostrarán las alertas o malfuncionamiento de las tareas o procesos previstos.
+											</p>
+
+											<div class="thumbnail">
+												<img src="images/v2.2.9-news/systemstatus_01.png" alt="vista rápida del estado del sistema">
+												<div class="caption">
+													<h5>Estado general del sistema</h5>
+
+													<ul>
+														<li>A: Listado de tareas y procesos del sistema.</li>
+														<li>B: detalle de la tarea "SAVED", que indica el proceso de guardado de un documento que ha sido firmado.</li>
+														<li>C: detalle de la tarea que indica el estado de los objetos pendientes de procesar en caché.</li>
+													</ul>
+
+												</div>
+											</div>
+
+
+										</section> <!-- fin seccion systemstatus -->										
+									</div>
+								</div>
+								<!-- fin contenido para para estado de sistema -->
+
+
+								<!-- contenido para messagesactivity -->
+								<div class="row-fluid">
+									<div class="span9">
+										<h2>Actividad: mensajes</h2>										
+										<section id="messagesactivity">
+											
+										<p>
+											Desde el menú "Actividad > Mensajes" se accede a una vista mejorada de los mensajes procesados por el sistema.
+										</p>
+
+										
+										<div class="thumbnail">
+											<img src="images/v2.2.9-news/messages_01_list.png" alt="actividad de mensajes">
+											<div class="caption">
+												<h5>Mensajes ya procesados por el Sistema</h5>
+
+												<ul>
+													<li>A: nueva búsqueda por filtros.</li>
+													<li>B: detalle del message, mostrando de forma rápida el usuario, fecha y código de mensaje.</li>
+													<li>C: muestra información de la plantilla relacionada.</li>
+													<li>D: estado del mensaje procesado.</li>
+													<li>E: acceso al detalle de mensaje.</li>
+												</ul>
+
+											</div>
+										</div>
+
+										<h3>Actividad: nuevo filtro de mensajes</h3>
+
+										<p>
+											Como novedad, se incluye un filtro de búsqueda, permitiendo buscar por cada de las siguientes categorías:
+										</p>
+
+										<ul>
+											<li>Aplicación de destino</li>
+											<li>Aplicación solicitante</li>
+											<li>Código de firma</li>
+											<li>Código de mensaje</li>
+											<li>Código de plantilla</li>
+											<li>Código del dispositivo</li>
+											<li>Código del usuario destinatario</li>
+											<li>Código del usuario solicitante</li>
+											<li>Descripción de mensaje</li>
+											<li>Estado del mensaje</li>
+											<li>Fecha de actualización</li>
+											<li>Fecha de creación</li>
+											<li>Metadato</li>
+											<li>Título del mensaje</li>
+										</ul>
+
+										<div class="thumbnail">
+											<img src="images/v2.2.9-news/messages_02_filter_1.png" alt="uso del nuevo filtro de mensajes">
+											<div class="caption">
+												<h5>Uso del nuevo filtro de mensajes</h5>
+
+												<ul>
+													<li>A: selección del filtro de búsqueda</li>
+													<li>B: dato que se desea localizar.</li>
+													<li>C: filtro activo en la búsqueda; permite uno o varios de forma simultanea.</li>
+													<li>D: resultado de la búsqueda filtrada.</li>
+												</ul>
+
+											</div>
+										</div>
+
+
+										<p>
+											En esta nueva vista de mensajes procesados, se podrán localizar rápidamente documentos reclamados por usuarios a partir de un <strong>dato específico que se almacenara en el formulario</strong>, por ejemplo, número de cédula, número de teléfono o email.
+										</p>
+
+										<p>
+											Para ello, haremos una búsqueda por <strong>metadato</strong>, tal y como se muestra en la siguiente captura:
+										</p>
+
+										<div class="thumbnail">
+											<img src="images/v2.2.9-news/messages_02_filter_2.png" alt="filtro por metadato">
+											<div class="caption">
+												<h5>Filtro de búsqueda por metadatos (del formulario)</h5>
+
+												<ul>
+													<li>A: selección del filtro metadato.</li>
+													<li>B: dato que buscaremos dentro de los campos informados en el formulario.</li>
+													<li>C: podremos buscar por varios metadatos al mismo tiempo.</li>
+													<li>D: resultado de la búsqueda filtrada por metadatos.</li>
+												</ul>
+
+											</div>
+										</div>
+
+										<h3>Actividad: mejora del detalle de mensajes</h3>
+
+										<p>
+											En esta nueva versión se ofrece una vista detallada y más usable.
+										</p>
+
+										<div class="thumbnail">
+											<img src="images/v2.2.9-news/messages_03_detail_1.png" alt="detalle de mensaje">
+											<div class="caption">
+												<h5>Información básica del mensaje</h5>
+
+												<ul>
+													<li>A: descarga directa del XML y del PDF firmado.</li>
+													<li>B: datos básicos del mensaje.</li>
+													<li>C: detalle del workflow ejecutado.</li>
+													<li>D: detalle de la notificación push asociada al mensaje.</li>
+												</ul>
+
+											</div>
+										</div>
+
+										<div class="thumbnail">
+											<img src="images/v2.2.9-news/messages_03_detail_2.png" alt="detalle de la transferencia">
+											<div class="caption">
+												<h5>Información de la transferencia externa del documento</h5>
+
+												<ul>
+													<li>A: información básica de la transferencia.</li>
+													<li>B: detalle del error o respuesta del proveedor externo.</li>
+												</ul>
+
+											</div>
+										</div>
+
+
+										<div class="thumbnail">
+											<img src="images/v2.2.9-news/messages_03_detail_3.png" alt="detalle del documento firmado">
+											<div class="caption">
+												<h5>Información del documento firmado</h5>
+
+												<ul>
+													<li>A: detalle de la firma y evidencias.</li>
+													<li>B: detalle de la firma (en este caso, la 2da firma no tiene evidencias asociadas.</li>
+												</ul>
+
+											</div>
+										</div>
+
+										</section>	<!-- fin seccion messagesactivity -->									
+									</div>
+								</div>
+								<!-- fin contenido para messagesactivity -->
+
+
+
+								<!-- inicio contenido para templates -->
+								<div class="row-fluid">
+									<div class="span9">
+										<h2>Plantillas</h2>										
+										<section id="templates">
+											
+											<p>
+												Desde el menú "Administración > Plantillas" se accede a una vista mejorada de las plantillas disponibles en el sistema, ofreciendo mayor información sobre su configuración.
+											</p>
+
+										
+											<div class="thumbnail">
+												<img src="images/v2.2.9-news/templates_01_list.png" alt="nuevo listado de plantillas disponibles">
+												<div class="caption">
+													<h5>Nuevo listado de plantillas</h5>
+
+													<ul>
+														<li>A: mayor detalle de la plantilla.</li>
+														<li>B: permite visualizar y probar la plantilla.</li>
+													</ul>
+
+												</div>
+											</div>
+
+
+											<div class="thumbnail">
+												<img src="images/v2.2.9-news/templates_02_view.png" alt="vista y prueba de plantillas">
+												<div class="caption">
+													<h5>Revisión y prueba de plantillas</h5>
+
+													<ul>
+														<li>A: código de message para facilitar el seguimiento de la prueba.</li>
+														<li>B: título con el que llegará la notificación push.</li>
+														<li>C: dispositivo al que llegará la notificación; sólo se mostrarán los dispositivos asociados al usuario que está haciendo la prueba (en sesión).</li>
+														<li>D: datos del formulario que estamos probando.</li>
+													</ul>
+
+												</div>
+											</div>
+
+										</section> <!-- fin seccion templates -->										
+									</div>
+								</div>
+								<!-- fin contenido para templates -->
+								
+
+							</div>
+
+						</div>
+
+
+					</div>
+				</div>
+
+			</div>
+
+			<div id="content-bottom" class="wrapper"></div>
+
+
+			<hr class="hide" />
+
+			<div id="footer">&Uacute;ltima revisi&oacute;n: 25-ene-2015. </div>
+
+		</div>
+
+	</div>
+</body>
+</html>
