@@ -165,17 +165,17 @@ Path del servicio en el que se recibirán los documentos enviados
 #### computec1.external_signed.ASYNC_TRANSFER
 **Disponible desde:** 2.2.6
 
-Puede tener valores ["true"|"false"]
+Puede tener valores ["true"|"false"] indica si la transferecia se realiza de forma síncrona o asíncrona
 
 #### computec1.external_signed.TRANSFER_ASYNC_PERIOD
 **Disponible desde:** 2.2.6
 
-
+Indica cada cuantos segundos se ejecuta el proceso periódico de tranferencia de documentos
 
 #### computec1.external_signed.MAX_RETRY_COUNT
 **Disponible desde:** 2.2.6
 
-
+Número máximo reintentos de transferecia de documentos en caso de error
 
 #### OAUTH_REQUEST_MAX_AGE
 **Disponible desde:** 2.0
