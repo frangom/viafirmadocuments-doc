@@ -1,6 +1,4 @@
-# Documentación de Mobile Services
-
-Lista de parámetros disponibles
+## Lista de parámetros disponibles
 
 #### PERSISTENCE_STORAGE
 **Disponible desde:** 1.0
