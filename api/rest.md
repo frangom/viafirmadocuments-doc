@@ -2,7 +2,21 @@
 
 ### Ejemplo de uso de servicios rest haciendo uso de postman https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm
 
-Envio desde el CRM un mensaje que solo genere el documento pdf, IMPORTANTE el código del workflow tiene que ser EX002
+##### Envio desde el CRM un mensaje que solo genere el documento pdf
+
+En la pestaña de OAuth de postman tenemos que indicar los valores correctos en los campos 'Consumer Key' y 'Consumer Secret' tal cual podemos ver en la siguiente captura
+
+![Configure Oauth](resources/image1.png)
+
+Realizar una petición 
+
+````
+POST http://dev.viafirma.com/mobile-services/api/v1/messages
+````
+
+![Send message](resources/image2.png)
+
+Enviando el siguiente json **IMPORTANTE el código del workflow tiene que ser EX002**
 
 ````
 {
@@ -47,9 +61,7 @@ Envio desde el CRM un mensaje que solo genere el documento pdf, IMPORTANTE el c�
 }
 ````
 
-En la pestaña de OAuth de postman tenemos que indicar los valores correctos en los campos 'Consumer Key' y 'Consumer Secret' tal cual podemos ver en la siguiente captura
+##### Ejemplo de recuperación de documento generado realizando petición GET a http://dev.viafirma.com/mobile-services/api/v1/documents/DRAFTED/1422479367884R127/1422479367884R127D140
 
-![Configure Oauth](resources/image1.png)
-
-Realizar una metición
+![Send message](resources/image3.png)
 
