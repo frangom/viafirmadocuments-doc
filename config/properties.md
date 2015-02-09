@@ -5,17 +5,6 @@
 
 URL de acceso público a la plataforma por ejemplo: http://dev.viafirma.com/mobile-services
 
-#### AUTHENTICATOR_CHAIN
-**Disponible desde:** 2.0
-
-Implementación utilizada para el control de acceso de usuarios a la plataforma, por ejemplo: com.viafirma.mobile.services.security.DatabaseAuthenticator para gestionar en acceso mediante base de datos.
-
-#### SEUS_URL
-**Disponible desde:** 2.0
-
-URL de acceso al servicios de autenticación de usuarios Seus, este parámetro solo es necesario en el caso de que se quiera utilizar:
- AUTHENTICATOR_CHAIN=com.viafirma.mobile.services.security.SeusAuthenticator
-
 #### PERSISTENCE_STORAGE
 **Disponible desde:** 1.0
 
@@ -40,6 +29,60 @@ Usuario de acceso a los servicios de Viafirma Platform
 **Disponible desde:** 1.0
 
 Clave de acceso a los servicios de Viafirma Platform
+
+#### REPOSITORIO_IMPL
+**Disponible desde:** 1.0
+
+Implementaciones disponibles para la persistencia de datos o documentos, plantillas, documentos firmados, datos de aplicaciones, etc.
+
+Actualmente están disponibles las siguientes implementaciones:
+
+> * **fileSystem** -->  org.hanuman.framework.external.repository.ManagerFileRepositorySimpleImpl
+> * **ftp** --> org.hanuman.framework.external.repository.FtpFileRepositorySimpleImpl
+> * **computec** --> org.hanuman.framework.external.repository.ComputecFileRepositoryImpl:**computec1**
+
+#### fileSystem.template.PATH_BASE
+**Disponible desde:** 1.0
+
+Ruta física en disco donde se persistirán las plantillas configuradas en el sistema.
+
+#### fileSystem.template.VERSIONAR
+**Disponible desde:** 1.0
+
+Este parámetro solo puede tener el valor false
+
+#### fileSystem.application.PATH_BASE
+**Disponible desde:** 1.0
+
+Ruta física en disco donde se persistirán los datos de las aplicaciones configuradas en el sistema.
+
+#### fileSystem.application.VERSIONAR
+**Disponible desde:** 1.0
+
+Este parámetro solo puede tener el valor false
+
+#### 'selected_impl'.signed.PATH_BASE
+**Disponible desde:** 1.0
+
+Ruta donde se persistirá una copia de los documentos firmados en el sistema.
+
+Se puede reemplazar 'selected_impl' por los valores [fileSystem|ftp]
+
+#### 'selected_impl'.signed.VERSIONAR
+**Disponible desde:** 1.0
+
+Este parámetro solo puede tener el valor false
+
+#### AUTHENTICATOR_CHAIN
+**Disponible desde:** 2.0
+
+Implementación utilizada para el control de acceso de usuarios a la plataforma, por ejemplo: com.viafirma.mobile.services.security.DatabaseAuthenticator para gestionar en acceso mediante base de datos.
+
+#### SEUS_URL
+**Disponible desde:** 2.0
+
+URL de acceso al servicios de autenticación de usuarios Seus, este parámetro solo es necesario en el caso de que se quiera utilizar:
+ AUTHENTICATOR_CHAIN=com.viafirma.mobile.services.security.SeusAuthenticator
 
 #### VIAFIRMA_MANAGER_WS_URL
 **Disponible desde:** 2.0
@@ -105,35 +148,50 @@ Puede tener valores [true|false] en caso de valer true, se adjuntara al contenid
 
 Texto del disclaimer que se añadirá al contenido de los email enviados por el sistema, como resultado de la ejecución de la tarea de callback
 
-#### REPOSITORIO_IMPL
-**Disponible desde:** 1.0
+#### computec1.external_signed.TEMPORAL_STORAGE
+**Disponible desde:** 2.2.6
 
-Implementaciones disponibles para la persistencia de datos o documentos, plantillas, documentos firmados, datos de aplicaciones, etc.
+Directorio físico de persistencia temporal de los documentos que serán transferidos al sistema externo computec
+#### computec1.external_signed.COMPUTEC_SERVICE
+**Disponible desde:** 2.2.6
 
-Actualmente están disponibles las siguientes implementaciones:
+URL de acceso al servicio de computec
 
-> * **fileSystem**  org.hanuman.framework.external.repository.ManagerFileRepositorySimpleImpl
-> * **ftp**  org.hanuman.framework.external.repository.FtpFileRepositorySimpleImpl
+#### computec1.external_signed.SERVICE_PATH
+**Disponible desde:** 2.2.6
 
-#### fileSystem.template.PATH_BASE
-#### fileSystem.template.VERSIONAR
+Path del servicio en el que se recibirán los documentos enviados
 
-#### fileSystem.application.PATH_BASE
-#### fileSystem.application.VERSIONAR
+#### computec1.external_signed.ASYNC_TRANSFER
+**Disponible desde:** 2.2.6
 
-#### 'selected_impl'.signed.PATH_BASE
-#### 'selected_impl'.signed.VERSIONAR
+Puede tener valores ["true"|"false"]
 
-#### computec.external_signed.TEMPORAL_STORAGE
-#### computec.external_signed.COMPUTEC_SERVICE
-#### computec.external_signed.SERVICE_PATH
-#### computec.external_signed.ASYNC_TRANSFER
-#### computec.external_signed.TRANSFER_ASYNC_PERIOD
-#### computec.external_signed.MAX_RETRY_COUNT
+#### computec1.external_signed.TRANSFER_ASYNC_PERIOD
+**Disponible desde:** 2.2.6
+
+
+
+#### computec1.external_signed.MAX_RETRY_COUNT
+**Disponible desde:** 2.2.6
+
+
 
 #### OAUTH_REQUEST_MAX_AGE
-Maximum age (in milliseconds) of timestamp to accept in incoming messages.
+**Disponible desde:** 2.0
+
+Número máximo de milisegundos de diferencia permitidos entre que se solicita una petición al servidor y es recibida por el servidor.
+
+Si este parámetro no está informado o tiene el valor 0 no se realiza la comprobación
 
 #### CREATE_TEMPLATE_EXAMPLES
+**Disponible desde:** 2.2.6
+
+Puede tener valores [true|false] en caso de valer true se instalan/actualizan de forma automática al iniciar el servidor las plantillas de ejemplo creadas para demostrar la funcionalidad del sistema
 
 #### METADATA_CIPHER_PUBLIC_KEY
+**Disponible desde:** 2.2.11
+
+Valor de la clave pública que se utilizará para el cifrado de metadatos de aquellas evidencias que no tengan informado el parámetro metadataCipherPublicKey.
+
+En caso de que este parámetro no sea configurado solo se cifrarán los metadatos de las evidencias que tengan informado el atributo metadataCipherPublicKey en el mensaje que solicita la petición

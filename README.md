@@ -14,3 +14,5 @@ Documentación pública de configuración y uso de la plataforma.
 3. Uso de la capa de servicios Rest
 4. Uso de servicios desde cliente Java
 5. Uso de servicios desde cliente iOS
+6. Uso y diseño de formulario
+7. Uso y deseño de plantillas
