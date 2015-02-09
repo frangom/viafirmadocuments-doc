@@ -49,7 +49,7 @@ Envio desde el CRM un mensaje que solo genere el documento pdf, IMPORTANTE el c�
 
 En la pestaña de OAuth de postman tenemos que indicar los valores correctos en los campos 'Consumer Key' y 'Consumer Secret' tal cual podemos ver en la siguiente captura
 
-![Configure Oauth](api/resources/image1.png)
+![Configure Oauth](resources/image1.png)
 
 Realizar una metición
 
