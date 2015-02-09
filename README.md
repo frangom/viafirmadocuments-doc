@@ -7,7 +7,7 @@ Documentación pública de configuración y uso de la plataforma.
   2. Instalación en Weblogic 12.1.2
 2. Parámetros de configuración de la plataforma
   1. [Lista de parámetros disponibles](config/properties.md)
-  2. Configuración en fichero config.properties
+  2. [Configuración en fichero config.properties](config/config.md)
   3. Configuración en context.xml
   4. Configuración de cache Hazelcast.xml
   5. Configuración de logs logback.xml
